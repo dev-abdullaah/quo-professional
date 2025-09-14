@@ -41,7 +41,7 @@
 	--primary-color: #0C1524;
 	--secondary-color: #F5F7FA;
 	--text-color: #4A5567;
-	--accent-color: #0aaeb9;
+	--accent-color: #37addc;
 	--light-cyan-color: #28D7E3;
 	--divider-color: #DBDFEA;
 	--dark-divider-color: #FFFFFF30;
@@ -412,7 +412,7 @@ body {
 
 header.main-header {
 	background: linear-gradient(135deg, #c8f2ff, #cbdfe6);
-	height: 65px;
+	height: 80px;
 	position: sticky;
 	top: 0;
 	z-index: 1000;
