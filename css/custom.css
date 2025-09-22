@@ -205,6 +205,58 @@ body {
 	padding-left: 0px;
 }
 
+.rbt-btn.btn-border-gradient {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 1.1em;
+	text-transform: capitalize;
+	padding: 10px 20px;
+	border-radius: 8px;
+	position: relative;
+	z-index: 1;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15), 0 6px 16px rgba(0, 0, 0, 0.1);
+	box-sizing: border-box;
+	transition: transform 0.2s ease-in-out, box-shadow 0.4s ease-in-out;
+	background: linear-gradient(95deg, hsl(194, 88%, 70%) -7%, hsl(199, 100%, 71%) 112%);
+	border: none;
+}
+
+.rbt-btn.btn-border-gradient::before {
+	content: '';
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	right: 2px;
+	bottom: 2px;
+	border-radius: 6px;
+	background: linear-gradient(95deg, hsl(194, 100%, 36%) -7%, hsl(199, 100%, 31%) 112%);
+	z-index: -1;
+}
+
+.rbt-btn.btn-border-gradient:hover {
+	transform: scale(1);
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25), 0 12px 24px rgba(0, 0, 0, 0.55);
+}
+
+.rbt-btn.btn-border-gradient:active {
+	transform: scale(0.98);
+	box-shadow: none;
+	transition: box-shadow 0.15s ease-out, transform 0.1s ease-out;
+}
+
+.rbt-btn.btn-border-gradient span {
+	display: inline-block;
+	transition: none;
+	background: transparent;
+	color: #fff;
+	position: relative;
+	z-index: 2;
+}
+
 .btn-default {
 	display: inline-block;
 	font-size: 16px;
@@ -4577,4 +4629,5 @@ body.modal-open {
 ::-webkit-scrollbar-track {
 	background: transparent;
 }
+
 /******************** Custom slim scrollbar *********************/
