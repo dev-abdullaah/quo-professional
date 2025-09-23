@@ -103,11 +103,29 @@ function handleNavigation() {
 }
 
 // Intercept click events and route them
+
+// function handleLinkClick(e) {
+//     const navLink = e.target.closest('[data-router-link], .nav-link, .navbar-brand');
+//     if (navLink && !e.ctrlKey && !e.metaKey) {
+//         e.preventDefault();
+//         const href = navLink.getAttribute('href');
+//         const path = href.startsWith('#') ? href.substring(1) : href;
+//         loadPage(path);
+//     }
+// }
+
 function handleLinkClick(e) {
     const navLink = e.target.closest('[data-router-link], .nav-link, .navbar-brand');
     if (navLink && !e.ctrlKey && !e.metaKey) {
-        e.preventDefault();
         const href = navLink.getAttribute('href');
+
+        // Check if it's an external link (starts with http, mailto, tel, or has target="_blank")
+        if (href.startsWith('http') || href.startsWith('mailto') || href.startsWith('tel') || navLink.getAttribute('target') === '_blank') {
+            // Let the browser handle external links normally
+            return;
+        }
+
+        e.preventDefault();
         const path = href.startsWith('#') ? href.substring(1) : href;
         loadPage(path);
     }
