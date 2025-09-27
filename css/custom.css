@@ -225,6 +225,7 @@ body {
 	transition: transform 0.2s ease-in-out, box-shadow 0.4s ease-in-out;
 	background: linear-gradient(95deg, hsl(194, 88%, 70%) -7%, hsl(199, 100%, 71%) 112%);
 	border: none;
+	color: #fff;
 }
 
 .rbt-btn.btn-border-gradient::before {
@@ -248,15 +249,6 @@ body {
 	transform: scale(0.98);
 	box-shadow: none;
 	transition: box-shadow 0.15s ease-out, transform 0.1s ease-out;
-}
-
-.rbt-btn.btn-border-gradient span {
-	display: inline-block;
-	transition: none;
-	background: transparent;
-	color: #fff;
-	position: relative;
-	z-index: 2;
 }
 
 .btn-default {
@@ -4366,6 +4358,7 @@ header.main-header {
 		max-width: 400px;
 	}
 }
+
 /******************* Code for Moving Text Ends Here********************/
 
 /*********************Range Calculator Code Starts**********************/
@@ -4929,4 +4922,5 @@ body.modal-open {
 		gap: 15px;
 	}
 }
+
 /******************** Team Cart *********************/
