@@ -39,6 +39,7 @@
 
 :root {
 	--primary-color: #0C1524;
+	--theme-color: hsl(199, 99%, 30%);
 	--secondary-color: #f7fafc;
 	--text-color: #4A5567;
 	--accent-color: #37addc;
@@ -4457,7 +4458,6 @@ header.main-header {
 /*********************Range Calculator Code Ends**********************/
 
 
-
 /******************* Code for Modal Starts Here*****************/
 body.modal-open {
 	padding-right: 0 !important;
@@ -4469,33 +4469,42 @@ body.modal-open {
 	display: none;
 	position: fixed;
 	z-index: 2147483004;
-	left: 50%;
-	top: 15vh;
-	/* Adds space from the top on large screens */
-	transform: translateX(-50%);
-	/* Centers the modal horizontally */
+	left: 0;
+	top: 0;
 	width: 100%;
-	max-height: 80vh;
-	/* Ensures modal doesn't exceed 80% of the viewport height */
-	overflow: hidden;
-	/* Prevents the modal from overflowing */
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.5);
+	/* Full screen overlay */
+}
+
+/* Custom styles for modal close button */
+#quotation_modal .btn-close {
+	width: 20px !important;
+	height: 20px !important;
+	padding: 0 !important;
+	background-size: 20px 20px !important;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	z-index: 10;
+}
+
+/* Optional: Add hover effect for better visibility */
+#quotation_modal .btn-close:hover {
+	opacity: 1 !important;
 }
 
 /* Modal Dialog */
 #quotation_modal .modal-dialog {
 	max-width: none;
 	width: 1060px;
-	margin: auto;
+	margin: 30px auto;
 	display: flex;
 	justify-content: center;
 	align-items: flex-start;
 	height: auto;
-	/* Allow dialog to adjust height automatically */
-	max-height: 80vh;
-	overflow: hidden;
-	/* Prevents overflow on the dialog */
 	position: relative;
-	/* Ensures the dialog respects the container's positioning */
 }
 
 /* Modal Content */
@@ -4504,47 +4513,43 @@ body.modal-open {
 	padding: 20px;
 	border-radius: 25px;
 	width: 100%;
-	max-height: calc(100vh - 20vh);
-	/* Allow the modal content to take up the available space within the viewport */
 	overflow-y: auto;
-	/* Enable scrolling only in the modal content */
-	height: 100%;
-	/* Ensure the modal content takes full height */
+	max-height: calc(100vh - 60px);
+	/* Account for top/bottom margins */
 }
 
 /* Responsive Adjustments for smaller screens */
 @media (max-width: 767px) {
-	.modal {
-		top: 10vh;
-		/* Adjusts top spacing for smaller screens */
-	}
-
 	#quotation_modal .modal-dialog {
-		width: 100%;
-		margin: 0 auto;
-		height: auto;
-		max-height: 90vh;
-		left: 50%;
-		transform: translateX(-50%);
+		width: 95%;
+		margin: 15px auto;
 	}
 
 	.modal-content {
 		padding: 15px;
-		max-height: 80vh;
-		/* Ensures the content scrolls in smaller screens */
-		overflow-y: auto;
+		max-height: calc(100vh - 30px);
+		/* Account for smaller margins */
+		border-radius: 15px;
+	}
+
+	/* Adjust close button position for mobile */
+	#quotation_modal .btn-close {
+		top: 10px;
+		right: 10px;
 	}
 }
 
 /* Adjustments for medium screens (tablets, etc.) */
 @media (max-width: 991px) and (min-width: 768px) {
 	#quotation_modal .modal-dialog {
-		width: 75%;
+		width: 85%;
+		margin: 25px auto;
 	}
 }
 
 /******************* Code for Modal Ends Here********************/
 
+/******************* Code Service Card Starts Here***************/
 .service-card {
 	/* background: linear-gradient(135deg, #d6e6f2, #bcd3df); */
 	background: linear-gradient(135deg, #c8f2ff, #cbdfe6);
@@ -4602,6 +4607,9 @@ body.modal-open {
 .service-card:hover h4 {
 	color: #326a8a;
 }
+
+/******************* Code Service Card Ends Here***************/
+
 
 /******************** Custom slim scrollbar *********************/
 /* Custom slim scrollbar */
