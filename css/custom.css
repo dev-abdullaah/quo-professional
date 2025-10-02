@@ -4255,7 +4255,7 @@ header.main-header {
 .monitor {
 	width: 100%;
 	max-width: 700px;
-	height: 80px;
+	height: 40px;
 	overflow: hidden;
 	position: relative;
 }
@@ -4268,13 +4268,13 @@ header.main-header {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
-	animation: scroll-vertical 5s linear infinite;
+	/* animation: scroll-vertical 5s linear infinite; */
 	background-color: transparent;
 }
 
 .monitor p {
 	font-family: 'Times New Roman', Times, serif;
-	font-size: 22px;
+	font-size: 25px;
 	font-weight: bold;
 	text-align: center;
 	margin: 0;
