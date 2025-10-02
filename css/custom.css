@@ -4608,6 +4608,34 @@ body.modal-open {
 	color: #326a8a;
 }
 
+.icon-vat {
+    color: #007dc6;
+}
+
+.icon-bookkeeping {
+    color: #001085;
+}
+
+.icon-payroll {
+    color: #FF8C42;
+}
+
+.icon-tax {
+    color: #FFA600;
+}
+
+.icon-reporting {
+    color: #5C3AFF;
+}
+
+.icon-cfo {
+    color: #f93f3f;
+}
+
+.icon-bpo {
+    color: #28A745;
+}
+
 /******************* Code Service Card Ends Here***************/
 
 
@@ -4654,7 +4682,7 @@ body.modal-open {
 .section-title h2::after {
 	content: '';
 	position: absolute;
-	bottom: -30px;
+	bottom: -10px;
 	left: 50%;
 	transform: translateX(-50%);
 	width: 80px;
